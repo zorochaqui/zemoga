@@ -5,6 +5,7 @@ from flask_marshmallow import Marshmallow
 app = Flask(__name__)
 ma = Marshmallow(app)
 
+#se declara el esquema de la tabla para deolver los campos
 class PortfolioSchema(ma.SQLAlchemySchema):
     class Meta:
         model = Portfolio

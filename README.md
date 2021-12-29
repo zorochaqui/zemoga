@@ -1,5 +1,18 @@
 # zemoga
 
+Para la aplicación se está usando
+
+Python 3.8 para arriba
+se está usando :
+
+SqlAlchemy
+dotenv
+tweepy
+marshmallow
+Flask
+Flask-RESTful
+
+
 To manually create a virtualenv on MacOS and Linux:
 
 ```
@@ -24,6 +37,12 @@ Once the virtualenv is activated, you can install the required dependencies.
 ```
 $ pip install -r requirements.txt
 ```
+
+
+para inciar la aplicación se ejecuta 
+
+$ python main.py
+
 ----------------------------------------------------------------------------------
 Esta ruta es para listar el un portafolio, los datos
 
@@ -106,3 +125,4 @@ Salida
 }
 
 ----------------------------------------------------------------------------------
+

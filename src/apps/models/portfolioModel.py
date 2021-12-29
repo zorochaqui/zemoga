@@ -2,6 +2,8 @@ from flask import g
 from src.config.models_cnf.database import db
 from sqlalchemy.sql.expression import bindparam
 
+#estructura de la base de datos
+
 class Portfolio(db.Model):
     __tablename__ = 'portfolio'
     id          = db.Column(db.BIGINT, primary_key=True, autoincrement=True)

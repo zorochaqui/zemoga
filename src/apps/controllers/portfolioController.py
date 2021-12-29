@@ -20,6 +20,7 @@ class PortfolioController:
     #         return error.SERVER_ERROR_500
 
     def portfolio(self, id):
+        #lista un perfil de portafolio
         try:
             users           = Portfolio.query.filter_by(id=id).first()
             user_schema     = PortfolioSchema()
@@ -30,6 +31,7 @@ class PortfolioController:
             return error.SERVER_ERROR_500
 
     def tweets(self, name, quantity):
+        #se lista los tweets, segun el nombre y la cantidad de tweets a traer
         try:
             tweet = {}
             group = []
@@ -53,8 +55,9 @@ class PortfolioController:
 
 
     def updatePortfolio(self, ids, data):
+        #actualizar el perfil de portafolio
         try:
-            sd=db.session.query(Portfolio).filter(Portfolio.id==1).update(data)
+            sd=db.session.query(Portfolio).filter(Portfolio.id==ids).update(data)
             db.session.commit()
             return {"success": "se actualizó correctamente"}
         except exc.SQLAlchemyError:
